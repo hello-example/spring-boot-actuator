@@ -1,0 +1,19 @@
+### 서버 상태 확인
+GET http://localhost:60000/actuator/health
+
+### Logger 전체 목록 확인
+GET http://localhost:60000/actuator/loggers
+
+### helloexample Logger 레벨 확인
+GET http://localhost:60000/actuator/loggers/helloexample
+
+### helloexample Logger 레벨 DEBUG 로 변경
+POST http://localhost:60000/actuator/loggers/helloexample
+Content-Type: application/json
+
+{
+  "configuredLevel": "DEBUG"
+}
+
+### 모든 로그 레벨 작성하기
+GET http://localhost:60000/hello
